@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function f2() {
+              const currentDate = new Date();
+              const day = currentDate.getDate();
+              const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+              ];
+              const month = monthNames[currentDate.getMonth()];
+              const year = currentDate.getFullYear();
+              const formattedDate = day + '/' + month + '/' + year;
+              document.getElementById("op2").innerHTML = formattedDate;
+            }
+            
+            function f1() {
+              const time = Date.now();
+              const date = new Date(time);
+              const currentDate = date.toString();
+              document.getElementById("op1").innerHTML = currentDate;
+            }
+            </script>
+    </head>
+    <body>
+        <button type="button" onclick="f2()">show date</button>
+        <p id="op2"></p>
+        <button type="button" onclick="f1()">show Time</button>
+        <p id="op1"></p>
+    </body>
+</html>
